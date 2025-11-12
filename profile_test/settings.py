@@ -14,9 +14,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-test-key-for-profile-
 # Debug - set to False in production
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-# Allowed hosts for Heroku
+# FIXED: Allowed hosts for Heroku - added your specific domain
 ALLOWED_HOSTS = [
+    'profiletestappp-b973b47bd50b.herokuapp.com',  # Added your actual Heroku domain
     'profiletestappp.herokuapp.com',
+    '.herokuapp.com',  # This allows any Heroku subdomain
     'localhost', 
     '127.0.0.1'
 ]
@@ -32,8 +34,8 @@ INSTALLED_APPS = [
     
     # Third party apps
     'crispy_forms',
-    'crispy_bootstrap5',  # Changed from bootstrap4 to bootstrap5
-    'whitenoise.runserver_nostatic',  # For static files
+    'crispy_bootstrap5',
+    'whitenoise.runserver_nostatic',
     
     # Your apps
     'profiles',
@@ -41,7 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Added for static files
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
