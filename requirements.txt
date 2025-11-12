@@ -12,3 +12,5 @@ django-summernote==0.8.20.0
 cloudinary==1.44.1
 django-cloudinary-storage==0.3.0
 Pillow==9.5.0
+python-dotenv==1.0.0
+
