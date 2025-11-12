@@ -8,9 +8,9 @@ django-crispy-forms==2.1
 django-extensions==4.1
 django-heroku==0.3.1
 crispy-bootstrap5==0.7
+crispy-bootstrap4==2022.1  # Add this line
 django-summernote==0.8.20.0
 cloudinary==1.44.1
 django-cloudinary-storage==0.3.0
 Pillow==9.5.0
 python-dotenv==1.0.0
-
